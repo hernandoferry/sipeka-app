@@ -17,10 +17,6 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->integer('hp')->unique();
-            $table->enum('status', ['active', 'suspend', 'inactive']); // status user 
-            $table->enum('role', ['0', '1', '2','3']); // 0:admin 1:operator 2:dosen 3:mahasiswa
-            $table->text('catatan')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
