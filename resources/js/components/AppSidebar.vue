@@ -20,6 +20,7 @@ import {
     DatabaseIcon,
     Folder,
     LucideLayoutDashboard,
+    Monitor,
     RepeatIcon,
     User2Icon,
 } from "lucide-vue-next";
@@ -29,10 +30,25 @@ import NavSingle from "./NavSingle.vue";
 const data = {
     navMain: [
         {
+            title: "Administrator",
+            url: "#",
+            icon: Monitor,
+            items: [
+                {
+                    title: "Daftar user",
+                    url: "#",
+                },
+                {
+                    title: "Tambah user",
+                    url: "#",
+                },
+            ],
+        },
+        {
             title: "Master Data",
             url: "#",
             icon: DatabaseIcon,
-            isActive: true,
+            // isActive: true,
             items: [
                 {
                     title: "Koleksi",
@@ -42,15 +58,13 @@ const data = {
                     title: "Jurusan",
                     url: "#",
                 },
-                
-                
             ],
         },
         {
             title: "Keanggotaan",
             url: "#",
             icon: User2Icon,
-            isActive: true,
+            // isActive: true,
             items: [
                 {
                     title: "Cari anggota",
@@ -60,8 +74,6 @@ const data = {
                     title: "Tambah anggota",
                     url: "#",
                 },
-                
-                
             ],
         },
 
@@ -85,7 +97,7 @@ const data = {
             title: "Laporan",
             url: "#",
             icon: BookA,
-            isActive: true,
+            // isActive: true,
             items: [
                 {
                     title: "Peminjaman",
