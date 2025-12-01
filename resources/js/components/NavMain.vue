@@ -16,7 +16,8 @@ import {
 } from "./ui/sidebar";
 
 import { LucideIcon } from "lucide-vue-next";
-import { ChevronRight } from "lucide-vue-next"
+import { ChevronRight } from "lucide-vue-next";
+import { Link } from "@inertiajs/vue3";
 
 defineProps<{
     items: {
@@ -60,9 +61,18 @@ defineProps<{
                                 :key="subItem.title"
                             >
                                 <SidebarMenuSubButton as-child>
-                                    <a :href="subItem.url">
+                                    <Link
+                                        class="block w-full"
+                                        :href="subItem.url"
+                                        prefetch
+                                        as="button"
+                                    >
+                                        <Settings class="mr-2 h-4 w-4" />
+                                        {{subItem.title}}
+                                    </Link>
+                                    <!-- <a :href="subItem.url">
                                         <span>{{ subItem.title }}</span>
-                                    </a>
+                                    </a> -->
                                 </SidebarMenuSubButton>
                             </SidebarMenuSubItem>
                         </SidebarMenuSub>

@@ -36,11 +36,11 @@ const data = {
             items: [
                 {
                     title: "Daftar user",
-                    url: "#",
+                    url: "list-user",
                 },
                 {
                     title: "Tambah user",
-                    url: "#",
+                    url: "add-user",
                 },
             ],
         },
@@ -121,7 +121,7 @@ const data = {
     projects: [
         {
             name: "Dashboard",
-            url: "#",
+            url: "dashboard",
             icon: LucideLayoutDashboard,
         },
     ],
