@@ -33,6 +33,7 @@ const data = {
             title: "Administrator",
             url: "#",
             icon: Monitor,
+            isActive:true,
             items: [
                 {
                     title: "Daftar user",
@@ -48,15 +49,19 @@ const data = {
             title: "Master Data",
             url: "#",
             icon: DatabaseIcon,
-            // isActive: true,
+            isActive: '',
             items: [
                 {
                     title: "Koleksi",
-                    url: "#",
+                    url: "list-koleksi",
+                },
+                {
+                    title: "Tambah koleksi",
+                    url: "add-koleksi",
                 },
                 {
                     title: "Jurusan",
-                    url: "#",
+                    url: "jurusan",
                 },
             ],
         },
@@ -64,15 +69,15 @@ const data = {
             title: "Keanggotaan",
             url: "#",
             icon: User2Icon,
-            // isActive: true,
+            isActive: '',
             items: [
                 {
                     title: "Cari anggota",
-                    url: "#",
+                    url: "cari-member",
                 },
                 {
                     title: "Tambah anggota",
-                    url: "#",
+                    url: "add-member",
                 },
             ],
         },
@@ -81,15 +86,15 @@ const data = {
             title: "Transaksi",
             url: "#",
             icon: RepeatIcon,
-            isActive: true,
+            isActive:'',
             items: [
                 {
                     title: "Peminjaman",
-                    url: "#",
+                    url: "pinjam-koleksi",
                 },
                 {
                     title: "Pengembalian",
-                    url: "#",
+                    url: "return-koleksi",
                 },
             ],
         },
@@ -97,7 +102,7 @@ const data = {
             title: "Laporan",
             url: "#",
             icon: BookA,
-            // isActive: true,
+            isActive: true,
             items: [
                 {
                     title: "Peminjaman",

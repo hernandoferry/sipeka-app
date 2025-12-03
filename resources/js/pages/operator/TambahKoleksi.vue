@@ -4,7 +4,7 @@ import Input from "@/components/ui/input/Input.vue";
 import Label from "@/components/ui/label/Label.vue";
 import Button from "@/components/ui/button/Button.vue";
 import {Alert,AlertDescription,AlertTitle} from "@/components/ui/alert/";
-import { CheckCircle2Icon,UserCheck2 } from "lucide-vue-next";
+import { CheckCircle2Icon,BookPlusIcon } from "lucide-vue-next";
 import {
   Select,
   SelectContent,
@@ -17,7 +17,7 @@ import { type BreadcrumbItem } from "@/types";
 
 const breadcrumbs: BreadcrumbItem[] = [
     {
-        title: "Tambah user",
+        title: "Tambah koleksi",
         href: addMember.url(),
     },
 ];
@@ -40,41 +40,51 @@ const breadcrumbs: BreadcrumbItem[] = [
                 class="relative min-h-[100vh] flex-1 rounded-xl border border-sidebar-border/70 gap-0"
             >
                 <div class="pl-5 pt-5 pb-7 flex">
-                    <UserCheck2/>
-                    <h6 class="font-bold text-2xl ml-4"> Form penambahan user</h6>
+                    <BookPlusIcon/>
+                    <h6 class="font-bold text-2xl ml-4"> Form penambahan koleksi</h6>
                 </div>
                 <div class="flex p-3 pl-5">
-                    <div class="w-50 mt-2"><Label for="picture">Nama Lengkap</Label></div>
+                    <div class="w-50 mt-2"><Label for="picture">Judul Buku</Label></div>
                     <div class="w-10">:</div>
                     <div class="w-100 float-none"><Input id="NmLkp" type="text" placeholder="conoh: Umar Khomarudin" /></div>
                 </div>
 
-                 <div class="flex p-3  pl-5">
-                    <div class="w-50 mt-2"><Label for="picture">Email</Label></div>
-                    <div class="w-10">:</div>
-                    <div class="w-100 float-none"><Input id="mail" type="email" placeholder="conoh:inilah@contoh.co.id" /></div>
-                </div>
                 <div class="flex p-3 pl-5">
-                    <div class="w-50 mt-2"><Label for="picture">Role</Label></div>
+                    <div class="w-50 mt-2"><Label for="picture">Pengarang</Label></div>
                     <div class="w-10">:</div>
-                    <div class="w-50 float-none">
-
-                          <Select>
-                                <SelectTrigger>
-                                <SelectValue placeholder="Select a role" />
-                                </SelectTrigger>
-                                <SelectContent>
-                                    <SelectItem value="admin">
-                                        Administrator
-                                    </SelectItem>
-                                    <SelectItem value="operator">
-                                        Operator
-                                    </SelectItem>
-                                </SelectContent>
-                         </Select>
-
-                    </div>
+                    <div class="w-100 float-none"><Input id="NmLkp" type="text" placeholder="conoh: Umar Khomarudin" /></div>
                 </div>
+
+                <div class="flex p-3 pl-5">
+                    <div class="w-50 mt-2"><Label for="picture">Penerbit</Label></div>
+                    <div class="w-10">:</div>
+                    <div class="w-100 float-none"><Input id="NmLkp" type="text" placeholder="conoh: Umar Khomarudin" /></div>
+                </div>
+
+                <div class="flex p-3 pl-5">
+                    <div class="w-50 mt-2"><Label for="picture">ISBN</Label></div>
+                    <div class="w-10">:</div>
+                    <div class="w-100 float-none"><Input id="NmLkp" type="text" placeholder="conoh: Umar Khomarudin" /></div>
+                </div>
+
+                <div class="flex p-3 pl-5">
+                    <div class="w-50 mt-2"><Label for="picture">Jumlah halaman</Label></div>
+                    <div class="w-10">:</div>
+                    <div class="w-20 float-none"><Input id="NmLkp" type="text" placeholder="123" /></div>
+                </div>
+
+                <div class="flex p-3 pl-5">
+                    <div class="w-50 mt-2"><Label for="picture">Tahun terbit</Label></div>
+                    <div class="w-10">:</div>
+                    <div class="w-20 float-none"><Input id="NmLkp" type="text" placeholder="YYYY" /></div>
+                </div>
+
+                <div class="flex p-3 pl-5">
+                    <div class="w-50 mt-2"><Label for="picture">Cover buku</Label></div>
+                    <div class="w-10">:</div>
+                    <div class="w-100 float-none"><Input id="NmLkp" type="file"  /></div>
+                </div>
+                
                 <div class="flex justify-end w-150">
                     <div class="w-120 ml-[210px] mt-9"> <Button class="ml-13 bg-blue-500 hover:bg-blue-700">Simpan</Button> <Button class="ml-5 bg-red-500 hover:bg-red-700">Batal</Button></div>
                 </div>
